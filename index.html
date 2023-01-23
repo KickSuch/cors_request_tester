@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CORS Request Tester</title>
+</head>
+<body>
+    <h1>CORS Request Tester</h1>
+    <label for="url_input">URL</label>
+    <div class="row">
+        <select name="method_input" id="method_input">
+            <option value="GET" selected="selected">GET</option>
+            <option value="POST">POST</option>
+            <option value="PUT">PUT</option>
+            <option value="PATCH">PATCH</option>
+            <option value="DELETE">DELETE</option>
+            <option value="COPY">COPY</option>
+            <option value="HEAD">HEAD</option>
+            <option value="OPTIONS">OPTIONS</option>
+        </select>
+        <input type="text" name="url_input" id="url_input">
+    </div>
+    <div class="side_by_side">
+        <div class="side">
+            <label for="headers_input">JSON Headers</label>
+            <textarea name="headers_input" id="headers_input"></textarea>
+        </div>
+        <div class="side">
+            <label for="body_input">JSON Request body</label>
+            <textarea name="body_input" id="body_input"></textarea>
+        </div>
+        <div class="side">
+            <label for="output">Output</label>
+            <textarea name="output" id="output" disabled></textarea>
+        </div>
+    </div>
+    <div class="row">
+        <button name="send" id="send">SEND</button>
+    </div>
+    <script src="cors_request_tester.js"></script>
+</body>
+</html>
